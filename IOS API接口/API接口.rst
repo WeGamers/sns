@@ -12,6 +12,7 @@ API接口调用与说明
     __weak typeof(self)weakSelf = self;  
     WeGamersSDKParams *gcParam = [[WeGamersSDKParams alloc] init];
     gcParam.sdkId = @"WeGamers内嵌社区分配的社区SDK编号(不为空)";
+    gcParam.sessionKey = @"WeGamers内嵌社区分配的社区SDK的sessionKey(不为空)";
     gcParam.gameAccountId = @"游戏账号(不为空)";
     gcParam.nickName = @"游戏玩家昵称(不为空)";
     gcParam.skinType = GameCommunityThemDefault;//五种换肤类型，这里选默认UI类型
@@ -91,6 +92,7 @@ API接口调用与说明
 
     @interface WeGamersSDKParams : NSObject
     @property(nonatomic, copy) NSString* sdkId;                     //WeGamers内嵌社区分配的社区SDK编号ID
+    @property(nonatomic, copy) NSString* sessionKey;                //WeGamers内嵌社区分配的社区SDK的sessionKey
     @property(nonatomic, copy) NSString* gameAccountId;             //游戏账号ID （游戏自己定义的账号ID）
     @property(nonatomic, copy) NSString* nickName;                  //游戏玩家昵称
     @property(nonatomic, assign) GameCommunityThemType skinType;    // 换肤类型
@@ -133,6 +135,7 @@ API接口调用与说明
   -1，表示社区主页视图控制器对象创建失败；
   -2，表示未找开应用主窗口；
   -3，表示弹出窗口异常；
+  -4,表示参数填写异常 （可能为空）
   */
   + (GameCommunityEntryResult *)openGameCommunityHomePageAndwillExitLive:(void (^)(void))blockWillExit;
 
