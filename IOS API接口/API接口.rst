@@ -15,7 +15,7 @@ API接口调用与说明
     gcParam.sessionKey = @"WeGamers内嵌社区分配的社区SDK的sessionKey(不为空)";
     gcParam.gameAccountId = @"游戏账号(不为空)";
     gcParam.nickName = @"游戏玩家昵称(不为空)";
-    gcParam.skinType = GameCommunityThemDefault;//五种换肤类型，这里选默认UI类型
+    gcParam.skinType = GameCommunityThemDark;//五种换肤类型，这里选默认UI类型
 
     [GameCommunityEntry initGameCommunity:gcParam showCommunityRed:^(BOOL bShow) {
         [weakSelf showNotifyRed:bShow];//游戏自己处理显示红点的UI回调block
@@ -83,9 +83,9 @@ API接口调用与说明
 .. code-block:: c
 
     typedef enum : NSInteger {
-        GameCommunityThemDefault = 0,   //默认皮肤
+        GameCommunityThemWG = 0,         //WG皮肤
         GameCommunityThemPurple,        //紫色皮肤
-        GameCommunityThemDark,          //深色皮肤
+        GameCommunityThemDark,          //深色皮肤（没配置，默认这套皮肤）
         GameCommunityThemLM,            //LM皮肤
         GameCommunityThemCC,            //CC皮肤
     } GameCommunityThemType;            //五种换肤类型
