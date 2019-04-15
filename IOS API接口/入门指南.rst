@@ -24,7 +24,7 @@ SDK入门指南
 
 .. image::  ../images/image13.jpg
 
-- 第三步：打开游戏内嵌社区接口
+- 第四步：打开游戏内嵌社区接口
 
 .. code-block:: c
 
