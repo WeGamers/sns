@@ -60,7 +60,7 @@ SDK初始化
 
 	WegamersSDK.getInstance().checkNewNoticeMessage();
 	
-.. image::  ../images_and/image_notice.jpg
+.. image::  ../images_and/image_notice.png
 
 ================
 设置不弹通知窗口状态
@@ -95,8 +95,42 @@ SDK初始化
 	//参数说明：Context  ctx ：Activity上下文，String snsDetailUrl 帖子详情URL
 
 ================
-退出游戏销毁服务
+服务控制
 ================
+
+暂停服务 
+=========================
+
+说明：离开当前页面或者进入后台, 调用该方法暂停服务 (Android 8.0和以上设备限制后台服务，避免产生不必要的ANR)
+
+.. code-block:: c
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        WegamersSDK.getInstance().onPause();
+    }
+
+
+恢复服务
+=========================
+
+说明：重新回到页面时调用该接口，恢复服务
+
+.. code-block:: c
+
+	
+    @Override
+    protected void onResume() {
+        super.onResume();
+        WegamersSDK.getInstance().onResume();
+    }
+
+
+销毁服务
+=========================
+
 
 说明：退出游戏时调用该接口，用于销毁服务进程
 
