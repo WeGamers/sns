@@ -26,7 +26,7 @@ Description: Initialize the SDK parameters. Before using other API interfaces, y
 	//Note: This SDK allows you to switch between horizontal and vertical screen, and will remember the user's last operation. If setLandscape is consistent with the first value of the visit, // the screen orientation will be what was the user's last operation.
 	params.setSdkId(String sdkId);
 	//Parameter description: WeGamers backend SDK ID provided by WeGamers. Must be filled in.
-	 params.setSessionkey(String sessionKey);
+	params.setSessionkey(String sessionKey);
 	//Parameter description: sessionname officially provided by wegamers, provided by wegamers, required
 
 	WegamersSDK.getInstance().setSdkParams(params);
@@ -55,6 +55,7 @@ Description: Initialize the SDK parameters. Before using other API interfaces, y
 ================
 Pop-up notification
 ================
+
 Pop-up notification detection
 =========================
 
@@ -64,9 +65,9 @@ Description: Detects the announcement notification message configured in backend
 
 	WegamersSDK.getInstance().checkNewNoticeMessage();
 	
-.. image::  ../images_and/image_notice.jpg
+.. image::  ../images_and/image_notice.png
 
-================
+
 Set the prohibition status of pop-up notification
 =========================
 
@@ -78,7 +79,7 @@ Description: Notification message display page can be controlled by the access s
 	//Parameter description: inComBat: true: enters battle, call checkNewNoticeMessage again will automatically set it to false.
 
 ================
-Enter embedded game community
+Enter game community
 ================
 
 Description: Enter the calling interface of the embedded community
@@ -88,7 +89,7 @@ Description: Enter the calling interface of the embedded community
 	WegamersSDK.getInstance().startBrowser(Context ctx);
 
 ================
-Details of a post in the embedded community
+Details of a post in the community
 ================
 
 Description: Interface access is optional. To display post content, provide post details URL to enter embedded community
