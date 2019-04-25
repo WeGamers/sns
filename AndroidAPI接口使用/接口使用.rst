@@ -87,16 +87,6 @@ SDK初始化
 
 	WegamersSDK.getInstance().startBrowser(Context ctx);
 
-================
-进入内嵌社区某帖子详情
-================
-
-说明：接口可选用，提供帖子详情URL进入内嵌社区展示帖子详情内容
-
-.. code-block:: c
-
-	WegamersSDK.getInstance().startBrowser(Context ctx,String snsDetailUrl);
-	//参数说明：Context  ctx ：Activity上下文，String snsDetailUrl 帖子详情URL
 
 ================
 服务控制
