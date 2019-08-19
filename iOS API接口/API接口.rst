@@ -153,6 +153,24 @@ API接口调用与说明
  */
  + (void)setInComBat:(BOOL)bInComBat;
 
+- 打开游戏话题内嵌社区界面
+
+.. code-block:: c
+
+  /**打开游戏话题社区
+  @param param 参数请参考WeGamersSDKParams定义。
+  @param sTopicId 话题Id
+  @param supportBlock 返回当前系统环境是否支持游戏社区
+  @return 打开的窗口结果对象：
+  1）社区主页视图控制器对象；
+  2）NSError对象。其中，错误码为
+  -1，表示社区主页视图控制器对象创建失败；
+  -2，表示未找开应用主窗口；
+  -3，表示弹出窗口异常；
+  -4,表示参数填写异常 （可能为空）
+  */
+ + (GameCommunityEntryResult *)openTopicGameCommunity:(WeGamersSDKParams*)param topicId:(NSString *)sTopicId supportGameCommunity:(void (^)(BOOL bSupport))supportBlock;
+
 
 工程代码改变
 =============

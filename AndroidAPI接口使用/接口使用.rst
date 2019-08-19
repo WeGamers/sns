@@ -78,16 +78,26 @@ SDK初始化
 	//参数说明：inComBat ：true进入战斗，再次调用checkNewNoticeMessage会自动置flase
 
 ================
-进入内嵌游戏社区
+进入游戏社区
 ================
 
-说明：进入内嵌社区的调用接口
+说明：进入社区的调用接口
 
 .. code-block:: c
 
 	WegamersSDK.getInstance().startBrowser(Context ctx);
+	
+================
+进入游戏社区话题列表
+================
 
+说明：话题由游戏官方管理后台配置
 
+.. code-block:: c
+
+	WegamersSDK.getInstance().startTopicBrowser(Context context,String topicId);
+	//参数说明：topicId ：话题ID，管理后台配置生成
+	
 ================
 服务控制
 ================
