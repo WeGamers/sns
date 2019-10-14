@@ -153,28 +153,12 @@ API接口调用与说明
  */
  + (void)setInComBat:(BOOL)bInComBat;
 
-- 打开游戏话题内嵌社区界面
+- 直接调用社区展示单个帖子
+说明：开发者可以通过接口在游戏中直接打开社区展示某个帖子，方便玩家获取信息并参与互动。帖子ID可以通过cms.wegamers.com管理后台获取。
 
 .. code-block:: c
 
-  /**打开游戏话题社区
-  @param param 参数请参考WeGamersSDKParams定义。
-  @param sTopicId 话题Id
-  @param supportBlock 返回当前系统环境是否支持游戏社区
-  @return 打开的窗口结果对象：
-  1）社区主页视图控制器对象；
-  2）NSError对象。其中，错误码为
-  -1，表示社区主页视图控制器对象创建失败；
-  -2，表示未找开应用主窗口；
-  -3，表示弹出窗口异常；
-  -4,表示参数填写异常 （可能为空）
-  */
- + (GameCommunityEntryResult *)openTopicGameCommunity:(WeGamersSDKParams*)param topicId:(NSString *)sTopicId supportGameCommunity:(void (^)(BOOL bSupport))supportBlock;
-
-- 打开对应帖子内嵌社区界面
-.. code-block:: c
-
-  /**打开对应帖子社区
+  /**调用社区展示单个帖子
   @param param 参数请参考WeGamersSDKParams定义。
   @param sSNSId 帖子Id
   @param supportBlock 返回当前系统环境是否支持游戏社区
@@ -188,6 +172,25 @@ API接口调用与说明
   */
  + (GameCommunityEntryResult *)openSNSGameCommunity:(WeGamersSDKParams*)param snsId:(NSString *)sSNSId supportGameCommunity:(void (^)(BOOL bSupport))supportBlock;
 
+
+- 直接调用社区展示话题页面
+说明：“话题”为内容聚合提供了可能性。开发者可以通过接口在游戏中直接打开社区展示某个话题页面，方便玩家获取某种特定的内容集合。话题ID可以通过cms.wegamers.com管理后台获取。
+
+.. code-block:: c
+
+  /**调用社区展示话题页面
+  @param param 参数请参考WeGamersSDKParams定义。
+  @param sTopicId 话题Id
+  @param supportBlock 返回当前系统环境是否支持游戏社区
+  @return 打开的窗口结果对象：
+  1）社区主页视图控制器对象；
+  2）NSError对象。其中，错误码为
+  -1，表示社区主页视图控制器对象创建失败；
+  -2，表示未找开应用主窗口；
+  -3，表示弹出窗口异常；
+  -4,表示参数填写异常 （可能为空）
+  */
+ + (GameCommunityEntryResult *)openTopicGameCommunity:(WeGamersSDKParams*)param topicId:(NSString *)sTopicId supportGameCommunity:(void (^)(BOOL bSupport))supportBlock;
 
 工程代码改变
 =============
