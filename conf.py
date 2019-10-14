@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'WeGamersSDK'
-copyright = '2019-4-16, IGG'
+copyright = '2019-4-16, Apps Innova'
 author = 'zhenyanglin'
 
 # The short X.Y version

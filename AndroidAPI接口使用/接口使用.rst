@@ -78,7 +78,7 @@ SDK初始化
 	//参数说明：inComBat ：true进入战斗，再次调用checkNewNoticeMessage会自动置flase
 
 ================
-进入游戏社区
+游戏社区
 ================
 
 说明：进入社区的调用接口
@@ -88,7 +88,7 @@ SDK初始化
 	WegamersSDK.getInstance().startBrowser(Context ctx);
 	
 ================
-进入游戏社区话题列表
+游戏社区话题列表
 ================
 
 说明：话题由游戏官方管理后台配置
@@ -97,6 +97,18 @@ SDK初始化
 
 	WegamersSDK.getInstance().startTopicBrowser(Context context,String topicId);
 	//参数说明：topicId ：话题ID，管理后台配置生成
+	
+	
+================
+游戏社区帖子详情
+================
+
+说明：通过帖子ID查看帖子详情，帖子ID可以从管理后台获得
+
+.. code-block:: c
+
+	WegamersSDK.getInstance().startBrowserSNSDetail(Context context,String snsID);
+	//snsID 帖子ID，可以从管理后台获得
 	
 ================
 服务控制
