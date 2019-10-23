@@ -172,7 +172,6 @@ API接口调用与说明
   */
  + (GameCommunityEntryResult *)openSNSGameCommunity:(WeGamersSDKParams*)param snsId:(NSString *)sSNSId supportGameCommunity:(void (^)(BOOL bSupport))supportBlock;
 
-
 - 直接调用社区展示话题页面
 说明：“话题”为内容聚合提供了可能性。开发者可以通过接口在游戏中直接打开社区展示某个话题页面，方便玩家获取某种特定的内容集合。话题ID可以通过cms.wegamers.com管理后台获取。
 
