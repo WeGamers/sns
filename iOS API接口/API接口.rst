@@ -191,7 +191,6 @@ API接口调用与说明
   */
  + (GameCommunityEntryResult *)openTopicGameCommunity:(WeGamersSDKParams*)param topicId:(NSString *)sTopicId supportGameCommunity:(void (^)(BOOL bSupport))supportBlock;
 
-
 工程代码改变
 =============
 
