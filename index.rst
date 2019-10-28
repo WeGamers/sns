@@ -10,7 +10,7 @@ WeGamers 社区接入文档
     :caption: Android 工程配置
     :numbered:
 
-    Android工程配置/aar文件引用
+    Android工程配置/gradle配置
     Android工程配置/manifest配置
 
 .. toctree::
