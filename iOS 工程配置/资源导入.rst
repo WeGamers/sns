@@ -1,4 +1,14 @@
 ============
+Pod 接入方式
+============
+
+说明：如果开发者工程支持Pod接入第三方库，只需在Podfile加入一句配置代码重新Pod Install即可（配置代码如下所示），使用Pod库接入就无须做资源导入以及工程配置操作
+
+.. code-block:: c
+
+	pod 'WGCommunity', :git => "https://github.com/dev8ios/WGCommunity.git"
+
+============
 SDK资源导入
 ============
 
